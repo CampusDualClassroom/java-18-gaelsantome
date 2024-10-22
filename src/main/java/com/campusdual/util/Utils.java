@@ -6,6 +6,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Utils {
 
@@ -14,6 +15,13 @@ public class Utils {
     public static final Random random = new Random();
     public static final DecimalFormat dF = new DecimalFormat("#.##");
 
+    public static class Util {
+        public static int requestInt(String message) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.print(message);
+            return scanner.nextInt();
+        }
+    }
     /**
      * Method to initialize input data.
      * @return input Buffered string data.
